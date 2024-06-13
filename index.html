@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
 
-  Bill
+    <div class="splitterlogo">
+      <img src="./images/logo.svg" alt="Splitter Logo">
+    </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <main>
 
-  Number of People
+      <div class="controls">
 
-  Tip Amount
-  / person
+        <div class="bill-container">
+          <p>Bill</p>
+          <input type="text" id="bill" placeholder="0" class="largeinput" novalidate>
+        </div>
+        
+        <div class="tip-container">
+          <p>Select Tip %</p>
+          <div class="percent grid">
+            <div>5%</div>
+            <div>10%</div>
+            <div>15%</div>
+            <div>25%</div>
+            <div>50%</div>
+            <input type="text" id="custom" placeholder="Custom" class="smallinput" novalidate>
+          </div>
+        </div>
+        
+        <div class="people-container">
+          <p>Number of People</p>
+          <input type="text" id="people-number"  placeholder="0" class="largeinput" novalidate>
+        </div>
+      </div>
 
-  Total
-  / person
+      
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="results">
+
+        <div class="amount">
+          <div class="amountperson">
+            <p class="white">Tip Amount</p>
+            <p class="perperson">/ person</p>
+          </div>
+          <div class="right">$0.00</div>
+        </div>
+        
+        <div class="total">
+          <div class="totalperson">
+            <p class="white">Total</p>
+            <p class="perperson">/ person</p>
+          </div>
+          <div class="right">$0.00</div>
+        </div>
+        
+        <button class="reset-button" id="reset-button">RESET</button>
+      </div>
+
+    </main>
+
+    
+    
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Álvaro Zacarías</a>.
+    </footer>
+    <script src="index.js"></script>
+  </body>
 </html>

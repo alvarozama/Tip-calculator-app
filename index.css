@@ -1,0 +1,207 @@
+:root {
+    --clr-strongcyan: hsl(172, 67%, 45%);
+    --clr-verydarkcyan: hsl(183, 100%, 15%);
+    --clr-darkgreyishcyan: hsl(186, 14%, 43%);
+    --clr-greyishcyan: hsl(184, 14%, 56%);
+    --clr-lightgreyishcyan: hsl(185, 41%, 84%);
+    --clr-verylightgreyishcyan: hsl(189, 41%, 97%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-activecyan: hsl(173, 61%, 77%);
+    --fontfamily: "Space Mono";
+    --fontize-forminput: 24px;
+    --fontweight: 700;
+}
+
+body {
+    background-color: var(--clr-lightgreyishcyan);
+    font-family: var(--fontfamily);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.splitterlogo {
+    margin-bottom: 80px;
+}
+
+main {
+    background-color: var(--clr-white);
+    width: 810px;
+    height: 640px;
+    max-width: 1080px;
+    max-height: 720px;
+    height: auto;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.controls {
+    margin: 0 0 10px 0;
+}
+
+.largeinput {
+    width: 350px;
+    height: 48px;
+    border: none;
+    background-color: var(--clr-verylightgreyishcyan);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--clr-verydarkcyan);
+    font-family: var(--fontfamily);
+    text-align: right;
+    padding-right: 15px;
+}
+
+.smallinput {
+    width: 112px;
+    background-color: var(--clr-verylightgreyishcyan);
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--clr-verydarkcyan);
+    font-family: var(--fontfamily);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+input[type=text]:hover {
+    cursor: pointer;
+}
+
+input[type=text]:focus {
+    cursor: text;
+    outline: none;
+    border: solid var(--clr-strongcyan) 2px;
+}
+
+.smallinput:focus {
+    text-align: right;
+    padding-right: 15px;
+}
+
+.bill-container input {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 15px;
+}
+
+.bill-container p,
+.tip-container p,
+.people-container p {
+    font-size: 1rem;
+    color: var(--clr-darkgreyishcyan);
+    font-weight: 500;
+}
+
+.percent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.percent div {
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--clr-white);
+    background-color: var(--clr-verydarkcyan);
+}
+
+.percent .custom {
+    background-color: var(--clr-verylightgreyishcyan);
+    color: var(--clr-darkgreyishcyan);
+}
+
+.percent div:hover {
+    background-color: var(--clr-activecyan);
+    color: var(--clr-verydarkcyan);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.people-container input {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 20px;
+}
+
+.results {
+    background-color: var(--clr-verydarkcyan);
+    width: 413px;
+    border-radius: 10px;
+    padding: 38px;
+}
+
+.right {
+    color: var(--clr-strongcyan);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.white {
+    color: var(--clr-white);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.perperson {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--clr-greyishcyan);
+    margin-top: 0;
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset-button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--clr-strongcyan);
+    color: var(--clr-verydarkcyan);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    top: 100px;
+    font-size: 1.2rem;
+    font-weight: var(--fontweight);
+}
+
+.reset-button:hover,
+.reset-button:focus {
+    background-color: var(--clr-activecyan);
+    color: var(--clr-verydarkcyan);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+footer {
+    margin: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

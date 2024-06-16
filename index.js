@@ -46,7 +46,7 @@ function validatePeople() {
 }
 
 peopleInput.addEventListener('keyup', () => {
-    validatePeople()
+    validatePeople();
 })
 
 /// Calculating function
@@ -65,11 +65,24 @@ function calculate() {
         }) 
     } 
 }
+
 calculate();
 
-peopleInput.addEventListener('keyup', () => {
-    calculate();
-})
+// TWILIGHT ZONE
+
+
+// Highlight Function
+
+function highlight() {
+    for (let i = 0; i < percentInput.length; i++) {
+        percentInput[i].addEventListener('click', () => {
+            percentInput[i].style.backgroundColor = "var(--clr-strongcyan)";
+            percentInput[i].style.color = "var(--clr-verydarkcyan)";
+        })
+    }
+}
+
+highlight();
 
 // Reset function
 
@@ -79,9 +92,24 @@ function reset() {
     percentInput.value = '';
     tipDisplay.innerText = '$0.00';
     totalDisplay.innerText = '$0.00';
+    resetBtn.style.filter = 'brightness(50%)';
+    for (let i = 0; i < percentInput.length; i++) {
+        percentInput[i].style.backgroundColor = "";
+        percentInput[i].style.color = "";
+    };
+    setTimeout(() => {
+        resetBtn.style.filter = 'brightness(100%)';
+      }, "1000");
+    percentInput[5].value = '';
+    percentInput[5].style = '';
 }
 
+
 resetBtn.addEventListener('click', () => {
+    reset();
+})
+
+window.addEventListener('load', () => {
     reset();
 })
 

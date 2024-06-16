@@ -113,18 +113,6 @@ input[type=text]:focus {
     font-size: 1.3rem;
 }
 
-/* .percent div {
-    padding: 5px;
-    border-radius: 5px;
-    color: var(--clr-white);
-    background-color: var(--clr-verydarkcyan);
-} */
-
-.percent .smallinput {
-    background-color: var(--clr-verylightgreyishcyan);
-    color: var(--clr-darkgreyishcyan);
-}
-
 .percentage {
     padding: 5px;
     border-radius: 5px;
@@ -132,6 +120,13 @@ input[type=text]:focus {
     color: var(--clr-white);
     background-color: var(--clr-verydarkcyan);
     font-size: 1.3rem;
+}
+
+.percent .smallinput {
+    background-color: var(--clr-verylightgreyishcyan);
+    color: var(--clr-darkgreyishcyan);
+    padding: 0;
+    text-align: center;
 }
 
 .percentage:hover {
@@ -234,22 +229,7 @@ footer a {
 @media (max-width: 1024px) {}
 
 /* md */
-@media (max-width: 875px) {
-    body {
-        display: flex;
-        height: auto;
-        padding-top: 100px;
-    }
-    
-    main {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .reset-button {
-        top: 10px;
-    }
-}
+@media (max-width: 875px) {}
 
 /* sm */
 @media (max-width: 640px) {}
@@ -257,39 +237,53 @@ footer a {
 /* xs */
 @media (max-width: 475px) {
     body {
-        width: 100vw;
-        padding-top: 40px;
-    }
-    
-    main {
-        width: 100%;
+        width: auto;
+        height: auto;
+        padding: 0;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     .splitterlogo {
-        margin-bottom: 40px;
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
-
-    .percent {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .largeinput {
-        width: auto;
-    }
-
-    .smallinput {
-        width: 124px;
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0 30px 0;
+        border-radius: 20px 20px 0 0;
     }
 
     .controls {
-        width: 70%;
+        width: 80%;
+    }
+
+    .largeinput {
+        width: 90%;
+    }
+
+    .percent input {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .results {
+        display: flex;
+        flex-direction: column;
         width: 70%;
     }
+
+    .reset-button {
+        top: 12px;
+    }
 }
+    

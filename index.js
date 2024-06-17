@@ -19,7 +19,7 @@ function validateBill() {
         billErrorMessage.style.display = 'none';
     } else if (billInput.value === '0') {
         billErrorMessage.style.display = 'flex';
-        billErrorMessage.innerText = "Can't be zero"
+        billErrorMessage.innerText = "Can't be zero";
     } else {
         billErrorMessage.style.display = 'flex';
         billErrorMessage.innerText = 'Has to ba a number';
@@ -79,7 +79,7 @@ function highlight() {
             percentInput[i].style.backgroundColor = "var(--clr-strongcyan)";
             percentInput[i].style.color = "var(--clr-verydarkcyan)";
         })
-    }
+    } 
 }
 
 highlight();

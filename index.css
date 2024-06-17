@@ -79,7 +79,15 @@ input[type=text]:hover {
 input[type=text]:focus {
     cursor: text;
     outline: none;
+    /* border: solid var(--clr-strongcyan) 2px; */
+}
+
+.valid-input {
     border: solid var(--clr-strongcyan) 2px;
+}
+
+.input-error {
+    border: solid tomato 2px;
 }
 
 .smallinput:focus {
@@ -103,6 +111,12 @@ input[type=text]:focus {
 
 .bill-container .bill-error {
     color: tomato;
+}
+
+.labels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .percent {
